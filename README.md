@@ -18,10 +18,11 @@
      - https://github.com/Ololade0/REWARDMANAGEMENTAPI/tree/master
    
 2. **UPDATE APPLICATION.PROPERTIES:**
+   -create a database on mySQL Workbench :cashback
    -Locate the src/main/resources/application.properties file in your project and update this file : 
      - spring.datasource.url=jdbc:mysql://localhost:3306/cashback
-     - spring.datasource.username=<your-username>
-     - spring.datasource.password=<your-password>
+     - spring.datasource.username= <your-username>
+     - spring.datasource.password= <your-password>
      - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
      - spring.jpa.hibernate.ddl-auto=update
       - spring.jpa.open-in-view=true
