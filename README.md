@@ -31,6 +31,7 @@
        - mvn spring-boot:run
          
     4. API Endpoints :
+        - PORT : 8080
        
         ### **Get Rewards Balance**
         - Endpoint: http://localhost:8080/api/rewards/balance/{customerId}
@@ -44,10 +45,11 @@
 
           
       ### **Get Cashback History**
-         - Endpoint: /api/rewards/history/{customerId}
+         - Endpoint: http://localhost:8080/api/rewards/history/{customerId}
          -  Request Type: GET
          - Request Parameters:customerId (path variable)
-                 ### **RESPONSE**
+             ### **RESPONSE**
+   
             -   [
                            {
                                 "transactionId": "5678",
@@ -58,11 +60,27 @@
                                   {
                                       "transactionId": "5679",
                                       "transactionDate": "2024-01-05",
-                                      "amountEarned": 15.00,
+                                      "amountEarned": 300.00,
                                       "description": "DETAILS FOR REWARD"
                                   }
                               ]
 
           
 
-      ### **NOTE** : BEFORE TESTING THE ENDPOINT, THERE IS NEEED TO CREATE A USER AND CREATE TRANSACTION TO AVOID THROWING AN ERROR MESSAGE,
+      ### **NOTE** : BEFORE TESTING THE ABOVE ENDPOINT, THERE IS NEED TO CREATE A CUSTOMER AND CREATE TRANSACTION TO AVOID THROWING AN ERROR MESSAGE.
+    ### **REGISTER CUSTOMER**
+   REQUEST TYPE : POST
+   ENDPOINT : http://localhost:8080/api/rewards/customer
+   REQUEST PAYLOAD:  - {
+                          "totalCashBack": 100.0,
+                          "currentBalance": 50.0
+                                                }
+    ### **CREATE TRANSACTION**
+         REQUEST TYPE : POST
+         ENDPOINT : http://localhost:8080/api/rewards/TR/createTransaction
+         REQUEST PAYLOAD:   {
+
+                                      "customerId": 5,
+                                      "amountEarned": 30.0,
+                                      "description": "SYSTEM DETAILS"
+                                    }
