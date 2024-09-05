@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.util.List;
 
 
@@ -19,16 +20,16 @@ public class CashBackHistoryServiceImplementation implements CashBackHistoryServ
     private CashBackHistoryRepository cashBackHistoryRepository;
 
     public CashBackHistory createCashbackTransaction(CashBackHistory cashBackHistory) {
-        cashBackHistory.setTransactionId(generateTransactionId());
+        cashBackHistory.setTransactionId(cashBackHistory.getTransactionId());
         cashBackHistory.setCustomerId(cashBackHistory.getCustomerId());
         cashBackHistory.setAmountEarned(cashBackHistory.getAmountEarned());
         cashBackHistory.setTransactionDate(LocalDate.now());
         cashBackHistory.setDescription(cashBackHistory.getDescription());
          return cashBackHistoryRepository.save(cashBackHistory);
     }
-    private Long generateTransactionId() {
-        return System.currentTimeMillis();
-    }
+//    private Long generateTransactionId() {
+//        return System.currentTimeMillis();
+//    }
 
     @Override
     public List<CashBackHistory> getCashBackTransactionHistoryByCustomerId(Long customerId) {

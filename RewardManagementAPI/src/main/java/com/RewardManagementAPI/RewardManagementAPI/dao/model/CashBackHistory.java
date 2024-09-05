@@ -1,5 +1,6 @@
 package com.RewardManagementAPI.RewardManagementAPI.dao.model;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -19,6 +20,7 @@ import java.time.LocalDateTime;
 @Entity(name = "CashBackHistory")
 public class CashBackHistory {
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long transactionId;
     private Long customerId;
     private LocalDate transactionDate;

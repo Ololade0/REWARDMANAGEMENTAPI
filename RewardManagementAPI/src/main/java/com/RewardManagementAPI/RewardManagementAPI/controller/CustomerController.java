@@ -25,7 +25,7 @@ public class CustomerController {
 
 
 
-    @GetMapping("{customerId}/balance")
+    @GetMapping("/balance/{customerId}")
     public ResponseEntity<?> getRewardsBalance(@PathVariable Long customerId) {
         try {
             Optional<Customer> foundCustomerRewardBalance = customerService.getRewardBalance(customerId);
@@ -36,7 +36,7 @@ public class CustomerController {
     }
 
 
-    @GetMapping("{customerId}/history")
+    @GetMapping("/history/{customerId}")
     public ResponseEntity<?> getCashbackHistory(@PathVariable Long customerId) {
         try {
             return new ResponseEntity<>(customerService.getCashBackHistory(customerId), HttpStatus.ACCEPTED);
