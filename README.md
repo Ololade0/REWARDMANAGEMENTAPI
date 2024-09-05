@@ -20,11 +20,11 @@
 2. **UPDATE APPLICATION.PROPERTIES:**
    -Locate the src/main/resources/application.properties file in your project and update this file : 
      - spring.datasource.url=jdbc:mysql://localhost:3306/rewards_management
-      spring.datasource.username=<your-username>
-      spring.datasource.password=<your-password>
-      spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
-      spring.jpa.hibernate.ddl-auto=update
-      spring.jpa.open-in-view=true
+     - spring.datasource.username=<your-username>
+     - spring.datasource.password=<your-password>
+     - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
+     - spring.jpa.hibernate.ddl-auto=update
+      - spring.jpa.open-in-view=true
 
    3. Build  the Project: Use Maven to build the project by running this command on your terminal:
        - mvn clean install
