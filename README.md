@@ -45,7 +45,22 @@
       ### **Get Cashback History**
          - Endpoint: /api/rewards/history/{customerId}
          -  Request Type: GET
-         - Request Parameters:customerId (path variable)   
+         - Request Parameters:customerId (path variable)
+                 ### **RESPONSE**
+            -   [
+                           {
+                                "transactionId": "5678",
+                                "transactionDate": "2024-01-01",
+                                "amountEarned": 10.00,
+                                "description": "SYSTEM DETAILS" },
+    
+                                  {
+                                      "transactionId": "5679",
+                                      "transactionDate": "2024-01-05",
+                                      "amountEarned": 15.00,
+                                      "description": "DETAILS FOR REWARD"
+                                  }
+                              ]
 
           
 
