@@ -35,12 +35,8 @@
         - Endpoint: http://localhost:8080/api/rewards/balance/{customerId}
         - Request Type: GET
         - Request Parameters:customerId (path variable)
-            ### **Get Rewards Balance**
-                              - { 
-    -"customerId": "1234",
-   - "totalCashback": 100.00,
-   - "currentBalance": 50.00
-}
+            ### **RESPONSE**
+                              - { -"customerId": "1234",- "totalCashback": 100.00,- "currentBalance": 50.00 }
       
 
           
