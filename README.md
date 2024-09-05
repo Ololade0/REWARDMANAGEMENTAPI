@@ -31,10 +31,24 @@
        - mvn spring-boot:run
          
     4. API Endpoints
-        Get Rewards Balance
-        Endpoint: /api/rewards/balance
-        Request Type: GET
-        Request Parameters:
-        customerId (query parameter or path variable)
+        ### **Get Rewards Balance**
+        - Endpoint: http://localhost:8080/api/rewards/balance/{customerId}
+        - Request Type: GET
+        - Request Parameters:customerId (path variable)
+            ### **Get Rewards Balance**
+                              - { 
+    "customerId": "1234",
+    "totalCashback": 100.00,
+    "currentBalance": 50.00
+}
+      
+
+          
+      ### **Get Cashback History**
+         - Endpoint: /api/rewards/history/{customerId}
+         -  Request Type: GET
+         - Request Parameters:customerId (path variable)   
+
+          
 
 
