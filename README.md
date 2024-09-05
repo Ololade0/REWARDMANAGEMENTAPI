@@ -15,7 +15,7 @@
 - ## Setup Instructions
 
 1. **Clone the Repository:**
-     - https://github.com/Ololade0/REWARDMANAGEMENTAPI.git
+     - https://github.com/Ololade0/REWARDMANAGEMENTAPI/tree/master
    
 2. **UPDATE APPLICATION.PROPERTIES:**
    -Locate the src/main/resources/application.properties file in your project and update this file : 
@@ -34,7 +34,7 @@
         - PORT : 8080
        
         ### **Get Rewards Balance**
-        - Endpoint: http://localhost:8080/api/rewards/balance/{customerId}
+        - Endpoint:http://localhost:8080/api/rewards/balance/{customerId}
         - Request Type: GET
         - Request Parameters:customerId (path variable)
             ### **RESPONSE**
@@ -45,7 +45,7 @@
 
           
       ### **Get Cashback History**
-         - Endpoint: http://localhost:8080/api/rewards/history/{customerId}
+         - Endpoint:http://localhost:8080/api/rewards/history/{customerId}
          -  Request Type: GET
          - Request Parameters:customerId (path variable)
              ### **RESPONSE**
@@ -67,17 +67,19 @@
 
           
 
-      ### **NOTE** : BEFORE TESTING THE ABOVE ENDPOINT, THERE IS NEED TO CREATE A CUSTOMER AND CREATE TRANSACTION TO AVOID THROWING AN ERROR MESSAGE.
+### **NOTE** : BEFORE TESTING THE ABOVE ENDPOINT, THERE IS NEED TO CREATE A CUSTOMER AND CREATE TRANSACTION TO AVOID THROWING AN ERROR MESSAGE.
+
     ### **REGISTER CUSTOMER**
-   -REQUEST TYPE : POST
-   -ENDPOINT : http://localhost:8080/api/rewards/customer
-   -REQUEST PAYLOAD:  - {
-                          "totalCashBack": 100.0,
-                          "currentBalance": 50.0
-                                                }
+         -REQUEST TYPE : POST
+         -ENDPOINT : http://localhost:8080/api/rewards/customer
+         -REQUEST PAYLOAD:  - {
+                                "totalCashBack": 100.0,
+                                "currentBalance": 50.0
+                                                      }
+                                                
     ### **CREATE TRANSACTION**
          -REQUEST TYPE : POST
-         -ENDPOINT : http://localhost:8080/api/rewards/TR/createTransaction
+         -ENDPOINT : http://localhost:8080/api/rewards/cash/createTransaction
          -REQUEST PAYLOAD:   {
 
                                       "customerId": 5,
