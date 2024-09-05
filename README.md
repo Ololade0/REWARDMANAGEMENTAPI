@@ -19,7 +19,7 @@
    
 2. **UPDATE APPLICATION.PROPERTIES:**
    -Locate the src/main/resources/application.properties file in your project and update this file : 
-      spring.datasource.url=jdbc:mysql://localhost:3306/rewards_management
+     - spring.datasource.url=jdbc:mysql://localhost:3306/rewards_management
       spring.datasource.username=<your-username>
       spring.datasource.password=<your-password>
       spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
