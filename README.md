@@ -30,7 +30,8 @@
        - mvn clean install
        - mvn spring-boot:run
          
-    4. API Endpoints
+    4. API Endpoints :
+       
         ### **Get Rewards Balance**
         - Endpoint: http://localhost:8080/api/rewards/balance/{customerId}
         - Request Type: GET
@@ -64,4 +65,4 @@
 
           
 
-
+      ### **NOTE** : BEFORE TESTING THE ENDPOINT, THERE IS NEEED TO CREATE A USER AND CREATE TRANSACTION TO AVOID THROWING AN ERROR MESSAGE,
