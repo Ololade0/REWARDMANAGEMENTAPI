@@ -19,7 +19,7 @@
    
 2. **UPDATE APPLICATION.PROPERTIES:**
    -Locate the src/main/resources/application.properties file in your project and update this file : 
-     - spring.datasource.url=jdbc:mysql://localhost:3306/rewards_management
+     - spring.datasource.url=jdbc:mysql://localhost:3306/cashback
      - spring.datasource.username=<your-username>
      - spring.datasource.password=<your-password>
      - spring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver
@@ -69,16 +69,16 @@
 
       ### **NOTE** : BEFORE TESTING THE ABOVE ENDPOINT, THERE IS NEED TO CREATE A CUSTOMER AND CREATE TRANSACTION TO AVOID THROWING AN ERROR MESSAGE.
     ### **REGISTER CUSTOMER**
-   REQUEST TYPE : POST
-   ENDPOINT : http://localhost:8080/api/rewards/customer
-   REQUEST PAYLOAD:  - {
+   -REQUEST TYPE : POST
+   -ENDPOINT : http://localhost:8080/api/rewards/customer
+   -REQUEST PAYLOAD:  - {
                           "totalCashBack": 100.0,
                           "currentBalance": 50.0
                                                 }
     ### **CREATE TRANSACTION**
-         REQUEST TYPE : POST
-         ENDPOINT : http://localhost:8080/api/rewards/TR/createTransaction
-         REQUEST PAYLOAD:   {
+         -REQUEST TYPE : POST
+         -ENDPOINT : http://localhost:8080/api/rewards/TR/createTransaction
+         -REQUEST PAYLOAD:   {
 
                                       "customerId": 5,
                                       "amountEarned": 30.0,
