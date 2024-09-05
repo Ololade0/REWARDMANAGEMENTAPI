@@ -37,9 +37,9 @@
         - Request Parameters:customerId (path variable)
             ### **Get Rewards Balance**
                               - { 
-    "customerId": "1234",
-    "totalCashback": 100.00,
-    "currentBalance": 50.00
+    -"customerId": "1234",
+   - "totalCashback": 100.00,
+   - "currentBalance": 50.00
 }
       
 
